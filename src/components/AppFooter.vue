@@ -2,6 +2,18 @@
 export default {
     data() {
         return {
+            socialsList:[
+                {link:"../src/assets/img/footer-facebook.png",name:'facebook'},
+                {link:"../src/assets/img/footer-twitter.png",name:'twitter'},
+                {link:"../src/assets/img/footer-youtube.png",name:'youtube'},
+                {link:"../src/assets/img/footer-pinterest.png",name:'pinterest'},
+                {link:"../src/assets/img/footer-periscope.png",name:'periscope'},
+            ],
+            comicsLinksList:['CHARACTERS','COMICS','MOVIES','TV','GAMES','VIDEO','NEWS'],
+            shopLinksList:['SHOP DC','SHOP DC COLLECTIBLES'],
+            dcLinksList:['Terms of use','Privacy Policy(new)','Ad choices','Advertising','Jobs','Subscritions',
+                'Talent Workshop','CSPC Certificates','Ratings','Shop Help','Contact Us'],
+            sitesLinks:[ 'DC','MAD Magazine','DC Kids','DC Universe','DC Power visa'],
         }
     }
 }
@@ -15,18 +27,11 @@ export default {
                     <ul>
                         <li>
                             <h4>DC COMICS</h4>
-                            <a href="#">CHARACTERS</a>
-                            <a href="#">COMICS</a>
-                            <a href="#">MOVIES</a>
-                            <a href="#">TV</a>
-                            <a href="#">GAMES</a>
-                            <a href="#">VIDEO</a>
-                            <a href="#">NEWS</a>
+                            <a href="#" v-for="comicLinkItem in comicsLinksList">{{comicLinkItem}}</a>
                         </li>
                         <li>
                             <h4>SHOP</h4>
-                            <a href="#">SHOP DC</a>
-                            <a href="#">SHOP DC COLLECTIBLES</a>
+                            <a href="#" v-for="shopLinkItem in shopLinksList">{{ shopLinkItem }}</a>
                         </li>
                     </ul>
                 </section>
@@ -34,17 +39,7 @@ export default {
                     <ul>
                         <li>
                             <h4>DC</h4>
-                            <a href="#">Terms of use</a>
-                            <a href="#">Privacy Policy(new)</a>
-                            <a href="#">Ad choices</a>
-                            <a href="#">Advertising</a>
-                            <a href="#">Jobs</a>
-                            <a href="#">Subscritions</a>
-                            <a href="#">Talent Workshop</a>
-                            <a href="#">CSPC Certificates</a>
-                            <a href="#">Ratings</a>
-                            <a href="#">Shop Help</a>
-                            <a href="#">Contact Us</a>
+                            <a href="#" v-for="dcItemList in dcLinksList">{{ dcItemList }}</a>
                         </li>
                     </ul>
                 </section>
@@ -52,11 +47,7 @@ export default {
                     <ul>
                         <li>
                             <h4>SITES</h4>
-                            <a href="#"> DC</a>
-                            <a href="#">MAD Magazine</a>
-                            <a href="#">DC Kids</a>
-                            <a href="#">DC Universe</a>
-                            <a href="#">DC Power visa</a>
+                            <a href="#" v-for="siteItem in sitesLinks">{{ siteItem }}</a>
                         </li>
                     </ul>
                 </section>
@@ -71,11 +62,7 @@ export default {
             </div>
             <div class="socials">
                 <span class="follow">FOLLOW US</span>
-                <img src="../assets/img/footer-facebook.png" alt="facebook">
-                <img src="../assets/img/footer-twitter.png" alt="twitter">
-                <img src="../assets/img/footer-youtube.png" alt="youtube">
-                <img src="../assets/img/footer-pinterest.png" alt="pinterest">
-                <img src="../assets/img/footer-periscope.png" alt="periscope">
+                <img v-for="itemList in socialsList" :src=itemList.link :alt="itemList.name">
             </div>
         </div>
     </footer>
@@ -140,6 +127,7 @@ footer{
         }
         .socials{
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 15px;
             cursor: pointer;

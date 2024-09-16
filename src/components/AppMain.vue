@@ -9,7 +9,7 @@ export default {
                 {img:'../src/assets/img/buy-comics-shop-locator.png',text:'COMIC SHOP LOCATOR'},
                 {img:'../src/assets/img/buy-dc-power-visa.svg',text:'DC POWER VISA'},
             ],
-            
+
         }
     }
 }
@@ -55,8 +55,10 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
+                    flex-wrap: wrap;
                     li{
                         display: flex;
+                        flex-wrap: wrap;
                         align-items: center;
                         gap: 5px;
                         font-size: 14px;
