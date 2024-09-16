@@ -2,6 +2,14 @@
 export default {
     data() {
         return {
+            iconsElements: [
+                {img:'../src/assets/img/buy-comics-digital-comics.png',text:'DIGITAL COMICS'},
+                {img:'../src/assets/img/buy-comics-merchandise.png',text:'DC MERCHANDISE'},
+                {img:'../src/assets/img/buy-comics-subscriptions.png',text:'SUBSCRIPTION'},
+                {img:'../src/assets/img/buy-comics-shop-locator.png',text:'COMIC SHOP LOCATOR'},
+                {img:'../src/assets/img/buy-dc-power-visa.svg',text:'DC POWER VISA'},
+            ],
+            
         }
     }
 }
@@ -9,36 +17,19 @@ export default {
 
 <template>
     <main>
-            <section class="jumbotron">
-                <div class="top-jumbo">
-                     --Content goes here--
-                </div>
-                 <div class="bottom-jumbo">
-                    <ul>
-                        <li>
-                            <img src="../assets/img/buy-comics-digital-comics.png" alt="comics">
-                            <span> DIGITAL COMICS</span>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-merchandise.png" alt="merch">
-                            <span>DC MERCHANDISE</span>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-subscriptions.png" alt="subscription">
-                            <span>SUBSCRIPTION</span>
-                        </li>
-                        <li>
-                            <img src="../assets/img/buy-comics-shop-locator.png" alt="locator">
-                            <span>COMIC SHOP LOCATOR</span>
-                        </li>
-                        <li>
-                            <img class="img-special" src="../assets/img/buy-dc-power-visa.svg" alt="visa">
-                            <span>DC POWER VISA</span>
-                        </li>
-                    </ul>
-                        
-                </div>
-            </section>
+        <section class="jumbotron">
+            <div class="top-jumbo">
+                <span>--Content goes here--</span>
+            </div>
+            <div class="bottom-jumbo">
+                <ul>
+                    <li v-for="iconItem in iconsElements">
+                        <img :src="iconItem.img">
+                        <span> {{iconItem.text}}</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 </template>
 
@@ -63,16 +54,18 @@ export default {
                 ul{
                     display: flex;
                     align-items: center;
+                    justify-content: space-around;
                     li{
                         display: flex;
                         align-items: center;
-                        padding: 0 30px;
                         gap: 5px;
-
-                        .img-special{
-                           width:80px;
-                           height: 90px;
+                        font-size: 14px;
+                        margin-right: 15px;
+                        img{
+                            width:100px;
+                            height: 100px;
                         }
+                        
                     }
                 }
             }

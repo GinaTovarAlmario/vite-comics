@@ -22,7 +22,6 @@ export default {
                         <li v-for="navItem in navLinks">
                             <a href="#">{{ navItem }}</a>
                         </li>
-
                     </ul>
                 </nav>
             </section>
