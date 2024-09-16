@@ -9,9 +9,11 @@ export default {
 
 <template>
     <main>
-        <h1>
+        <div class="container">
+            <h1>
             main
-        </h1>
+            </h1>
+        </div>
     </main>
 </template>
 
