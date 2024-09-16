@@ -2,6 +2,9 @@
 export default {
     data() {
         return {
+            navLinks:['CHARACTERS','COMICS','MOVIES','TV','GAMES','COLLECTIBLES','VIDEO',
+                'FANS','NEWS','SHOP'
+            ],
         }
     }
 }
@@ -16,16 +19,10 @@ export default {
             <section class="navbar">
                 <nav>
                     <ul>
-                        <li><a href="#">CHARACTERS</a></li>
-                        <li class="active"><a href="#">COMICS</a></li>
-                        <li><a href="#">MOVIES</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">GAMES</a></li>
-                        <li><a href="#">COLLECTIBLES</a></li>
-                        <li><a href="#">VIDEO</a></li>
-                        <li><a href="#">FANS</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">SHOP</a></li>
+                        <li v-for="navItem in navLinks">
+                            <a href="#">{{ navItem }}</a>
+                        </li>
+
                     </ul>
                 </nav>
             </section>

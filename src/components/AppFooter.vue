@@ -104,7 +104,7 @@ footer{
                     flex-direction: column;
                     align-items: baseline;
                     gap: 5px;
-                    padding: 0 20px;
+                    padding: 10px 20px;
 
                     a{
                         color: grey;
