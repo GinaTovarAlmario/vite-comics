@@ -86,16 +86,24 @@ export default {
 }
 </script>
 <template>
-    <SeriesListCard
-    v-for="(CurrentSeriesItem,index) in CurrentSeries" :key="index"
-    :seriesThumb="CurrentSeriesItem.thumb"
-    :seriesPrice="CurrentSeriesItem.price"
-    :seriesName = "CurrentSeriesItem.series"
-    :seriesType = "CurrentSeriesItem.type"
-    />
+    <div class="card">
+        <SeriesListCard
+        v-for="(CurrentSeriesItem,index) in CurrentSeries" :key="index"
+        :seriesThumb="CurrentSeriesItem.thumb"
+        :seriesPrice="CurrentSeriesItem.price"
+        :seriesName = "CurrentSeriesItem.series"
+        :seriesType = "CurrentSeriesItem.type"
+        />
+    </div>
 </template>
 
 <style lang="scss" scoped>
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
   
 </style>
 

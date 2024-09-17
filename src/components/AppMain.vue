@@ -58,8 +58,10 @@ export default {
         }
         #current-series{
             color: white;
-            height: 300px;
+            height: 800px;
             background-color: black;
+            display: flex;
+            align-items: center;
         }
         #options{
             height: 300px;
