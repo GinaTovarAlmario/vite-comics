@@ -31,7 +31,13 @@ export default {
             <img id="jumbo-img" src="../assets/img/jumbotron.jpg" alt="jumbotronDc">
         </section>
         <section id="current-series">
-            <SeriesList />
+            <h2 class="box title-section">Current Series</h2>
+            <div class="content-series">
+                <SeriesList />
+            </div>
+            <div id="more-info">
+                <a class="box" href="#">Load More</a>
+            </div>
         </section>
         <section id="options">
             <ul>
@@ -61,7 +67,26 @@ export default {
             height: 800px;
             background-color: black;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+
+            .content-series{
+            display: flex;
+            align-items: center;
+            }
+            .box{
+                background-color: blue;
+                color: white;
+                width: 200px;
+                padding: 10px 15px;
+            }
+            .title-section{
+            }
+            #more-info{
+                margin: 30px 0;
+            }
+            
         }
         #options{
             height: 300px;
