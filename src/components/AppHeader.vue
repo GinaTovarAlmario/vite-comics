@@ -2,8 +2,17 @@
 export default {
     data() {
         return {
-            navLinks:['CHARACTERS','COMICS','MOVIES','TV','GAMES','COLLECTIBLES','VIDEO',
-                'FANS','NEWS','SHOP'
+            navLinks:[
+                {label:'CHARACTERS',url:'#',active:false},
+                {label:'COMICS',url:'#',active:true},
+                {label:'MOVIES',url:'#',active:false},
+                {label:'TV',url:'#',active:false},
+                {label:'GAMES',url:'#',active:false},
+                {label:'COLLECTIBLES',url:'#',active:false},
+                {label:'VIDEO',url:'#',active:false},
+                {label:'FANS',url:'#',active:false},
+                {label:'NEWS',url:'#',active:false},
+                {label:'SHOP',url:'#',active:false}
             ],
         }
     }
@@ -19,8 +28,8 @@ export default {
             <section class="navbar">
                 <nav>
                     <ul>
-                        <li v-for="navItem in navLinks">
-                            <a href="#">{{ navItem }}</a>
+                        <li v-for="(navItem,index) in navLinks" :key="index" :class="{active:navItem.active}">
+                            <a :href="navItem.url">{{ navItem.label }}</a>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +56,6 @@ export default {
             justify-content: center;
             align-items: center;
             font-weight: 700;
-
 
             li{
                 padding: 20px 10px;
