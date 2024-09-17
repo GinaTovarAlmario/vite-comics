@@ -27,11 +27,12 @@ export default {
 }
 </script>
 <template>
+    <div>
+       <img :src="seriesThumb" :alt="seriesName">
+    </div>
     <h3>
-        SeriesListCard
-        {{ seriesName }}}
+        {{ seriesName }}
     </h3>
-
 </template>
 
 <style lang="scss" scoped>
