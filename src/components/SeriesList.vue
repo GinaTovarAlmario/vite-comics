@@ -1,4 +1,6 @@
 <script>
+import SeriesListCard from './SeriesListCard.vue';
+import SeriesListCard from './SeriesListCard.vue';
 export default {
     data() {
         return {
@@ -78,11 +80,14 @@ export default {
             ],
 
         }
+    },
+    components:{
+        SeriesListCard,
     }
 }
 </script>
 <template>
-
+    <SeriesListCard/>
 </template>
 
 <style lang="scss" scoped>
