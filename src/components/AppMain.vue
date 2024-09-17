@@ -9,6 +9,7 @@ export default {
                 {imgUrl:'buy-comics-shop-locator.png',text:'COMIC SHOP LOCATOR'},
                 {imgUrl:'buy-dc-power-visa.svg',text:'DC POWER VISA'},
             ],
+            
         }
     },
     methods:{
