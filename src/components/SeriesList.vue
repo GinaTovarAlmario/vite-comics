@@ -1,10 +1,9 @@
 <script>
 import SeriesListCard from './SeriesListCard.vue';
-import SeriesListCard from './SeriesListCard.vue';
 export default {
     data() {
         return {
-            seriesList:[
+            CurrentSeries:[
                 {
                     "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     "price": "$19.99",
@@ -87,7 +86,12 @@ export default {
 }
 </script>
 <template>
-    <SeriesListCard/>
+    <SeriesListCard
+    :seriesThumb="CurrentSeries[0].thumb"
+    :seriesPrice="CurrentSeries[0].price"
+    :seriesName = "CurrentSeries[0].series"
+    :seriesType = "CurrentSeries[0].type"
+    />
 </template>
 
 <style lang="scss" scoped>

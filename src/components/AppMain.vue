@@ -1,6 +1,5 @@
 <script>
 import SeriesList from './SeriesList.vue';
-import SeriesList from './SeriesList.vue';
 export default {
     data() {
         return {
@@ -61,10 +60,6 @@ export default {
             color: white;
             height: 300px;
             background-color: black;
-            font-size: 30px;
-            display: flex;
-            align-items: center;
-            padding-left: 15px;
         }
         #options{
             height: 300px;
