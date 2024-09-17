@@ -87,10 +87,11 @@ export default {
 </script>
 <template>
     <SeriesListCard
-    :seriesThumb="CurrentSeries[0].thumb"
-    :seriesPrice="CurrentSeries[0].price"
-    :seriesName = "CurrentSeries[0].series"
-    :seriesType = "CurrentSeries[0].type"
+    v-for="(CurrentSeriesItem,index) in CurrentSeries" :key="index"
+    :seriesThumb="CurrentSeriesItem.thumb"
+    :seriesPrice="CurrentSeriesItem.price"
+    :seriesName = "CurrentSeriesItem.series"
+    :seriesType = "CurrentSeriesItem.type"
     />
 </template>
 

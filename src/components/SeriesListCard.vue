@@ -12,7 +12,7 @@ export default {
            required:true,
         },
         seriesPrice:{
-            type:Number,
+            type: String,
             required:false,
         },
         seriesName:{
