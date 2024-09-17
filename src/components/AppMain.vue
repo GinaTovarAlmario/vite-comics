@@ -70,6 +70,8 @@ export default {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
+            padding-left: 20px;
 
             .content-series{
             display: flex;
@@ -82,6 +84,11 @@ export default {
                 padding: 10px 15px;
             }
             .title-section{
+                position: absolute;
+                top: -25px;
+                left: 15px;
+                right: 0;
+
             }
             #more-info{
                 margin: 30px 0;
