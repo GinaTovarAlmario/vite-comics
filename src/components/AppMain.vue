@@ -1,4 +1,6 @@
 <script>
+import SeriesList from './SeriesList.vue';
+import SeriesList from './SeriesList.vue';
 export default {
     data() {
         return {
@@ -11,6 +13,10 @@ export default {
             ],
             
         }
+    },
+    components:{
+        SeriesList,
+
     },
     methods:{
         getImageUrl(imagePath){
@@ -26,7 +32,7 @@ export default {
             <img id="jumbo-img" src="../assets/img/jumbotron.jpg" alt="jumbotronDc">
         </section>
         <section id="current-series">
-            <span>--Content goes here--</span>
+            <SeriesList />
         </section>
         <section id="options">
             <ul>
